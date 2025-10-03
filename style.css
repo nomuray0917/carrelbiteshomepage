@@ -333,3 +333,27 @@ hr {
 .archive-link a:hover {
     background-color: #777;
 }
+
+/* お問い合わせページのスタイル */
+.forms-container {
+    width: 100%; /* 親要素の幅を100%に設定 */
+    max-width: 640px; /* 最大幅を640pxに制限 */
+    margin: 2rem auto;
+}
+
+.forms-container iframe {
+    width: 100%; /* iframeの幅を親要素の100%に設定 */
+    height: 600px; /* 高さを固定 (必要に応じて調整) */
+}
+
+.contact-email {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 3rem;
+    line-height: 1.8;
+}
+
+.contact-email a {
+    color: #007bff;
+    text-decoration: underline;
+}
