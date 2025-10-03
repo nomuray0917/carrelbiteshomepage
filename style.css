@@ -336,14 +336,14 @@ hr {
 
 /* お問い合わせページのスタイル */
 .forms-container {
-    width: 100%; /* 親要素の幅を100%に設定 */
-    max-width: 640px; /* 最大幅を640pxに制限 */
+    width: 100%;
+    max-width: 640px;
     margin: 2rem auto;
 }
 
 .forms-container iframe {
-    width: 100%; /* iframeの幅を親要素の100%に設定 */
-    height: 600px; /* 高さを固定 (必要に応じて調整) */
+    width: 100%;
+    min-height: 500px; /* ここを変更 */
 }
 
 .contact-email {
