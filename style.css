@@ -53,21 +53,36 @@ header h1 {
 /* PCとスマホ共通のメンバーリスト設定 */
 .member-list {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center; /* 中央寄せ */
+    flex-wrap: wrap; /* 折り返しを許可 */
+    gap: 20px; /* 要素間の隙間 */
 }
 
-/* PC用のメンバープロフィール設定（デフォルト） */
+/* デフォルト（PC用）のメンバープロフィール設定 */
 .member {
     background: #fff;
     padding: 1.5rem;
     margin: 1rem;
-    /* ここで幅をcalc()で設定し、2列に強制 */
+    /* 50%を基準に幅を計算し、横に2つ並ぶようにする */
     flex: 0 0 calc(50% - 2rem); 
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ---ここからスマホ用の設定--- */
+@media (max-width: 768px) {
+    /* メンバーリストを縦並びにする */
+    .member-list {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    /* メンバーの幅を画面いっぱいに広げる */
+    .member {
+        flex: 1 1 100%; 
+        margin: 0.5rem 0;
+    }
 }
 
 .button {
@@ -85,60 +100,20 @@ header h1 {
     background-color: #555;
 }
 
-.back-to-top {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    background-color: #555;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-.back-to-top:hover {
-    background-color: #777;
-}
-
-/* ---ここからスマホ用の設定--- */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    .main-visual {
-        max-height: 40vh;
-    }
-
-    .member-list {
-        flex-direction: column; /* 縦に並べる */
-        gap: 10px;
-    }
-
-    .member {
-        flex: 1 1 100%; /* 横幅いっぱいに広げる */
-        margin: 0.5rem 0;
-    }
-}
 /* style.css ファイル内 */
 
 .back-to-top {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+    position: fixed; /* ここをfixedに変更 */
+    top: 20px; /* 上から20pxの位置に固定 */
+    right: 20px; /* 右から20pxの位置に固定 */
     background-color: #555;
     color: #fff;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem; /* パディングを調整して少し大きく */
     text-decoration: none;
     border-radius: 5px;
     font-size: 1rem;
     transition: background-color 0.3s;
+    z-index: 1000; /* 他の要素より手前に表示 */
 }
 
 .back-to-top:hover {
@@ -150,5 +125,6 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
-    position: relative;
+    /* position: relative; は不要になるため削除 */
 }
+
