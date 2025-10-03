@@ -195,3 +195,141 @@ header {
     background-color: #555;
     cursor: default;
 }
+
+/* ディスコグラフィー一覧ページのグリッド表示 */
+.discography-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+}
+
+.discography-link {
+    width: 250px; /* 一覧のジャケットサイズ */
+    transition: transform 0.3s;
+}
+
+.discography-link:hover {
+    transform: translateY(-5px); /* ホバー時のアニメーション */
+}
+
+.discography-link img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.discography-link h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* 個別ページのスタイル */
+.album-details {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.album-art-large {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .discography-link {
+        width: 150px;
+    }
+    .album-details {
+        flex-direction: column;
+    }
+}
+/* ライブページのスタイル */
+.live-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.live-item {
+    background: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.live-item h3 {
+    margin-top: 0;
+}
+
+.live-date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.live-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.live-venue {
+    font-size: 1.1rem;
+    color: #777;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.ticket-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.ticket-link:hover {
+    background-color: #555;
+}
+
+.past-live {
+    opacity: 0.7;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 3rem 0;
+}
+/* アーカイブリンクのスタイル */
+.archive-link {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.archive-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.archive-link a:hover {
+    background-color: #777;
+}
