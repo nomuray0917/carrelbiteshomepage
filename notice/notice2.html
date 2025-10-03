@@ -3,21 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>メンバー紹介 | carrel bites</title>
+    <title>NOTICE | carrel bites</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const headerNav = document.querySelector('.header-nav');
-
-        if(menuToggle && headerNav) {
-            menuToggle.addEventListener('click', function() {
-                headerNav.classList.toggle('active');
-            });
-        }
-    });
-</script>
 <body>
 
     <header>
@@ -50,38 +38,30 @@
         </a>
     </div>
 </header>
-    
-    <main class="main-visual">
-        <img src="images/artistpicture_temp.png" alt="バンドの集合写真" class="band-photo">
-    </main>
 
     <div class="container">
-        <div class="member-list">
-            <div class="member">
-                <h3>野村</h3>
-                <p>Vo./Gt.</p>
-                <p>【プロフィールや好きなもの】</p>
-            </div>
+        <section class="section">
+            <h2>NOTICE</h2>
 
-            <div class="member">
-                <h3>あおの</h3>
-                <p>Ba./Key.</p>
-                <p>【プロフィールや好きなもの】</p>
-            </div>
-            
-            <div class="member">
-                <h3>かか</h3>
-                <p>Dr.</p>
-                <p>【プロフィールや好きなもの】</p>
-            </div>
+            <div class="notice-list">
+                <article class="notice-item">
+                    <h3>【お知らせのタイトル1】</h3>
+                    <p class="notice-date">【日付1】</p>
+                    <p>【お知らせの内容1】</p>
+                </article>
 
-            <div class="member">
-                <h3>【メンバー名4】</h3>
-                <p>Gt.</p>
-                <p>【プロフィールや好きなもの】</p>
-            </div>
-            
-        </div>
+                <article class="notice-item">
+                    <h3>【お知らせのタイトル2】</h3>
+                    <p class="notice-date">【日付2】</p>
+                    <p>【お知らせの内容2】</p>
+                </article>
+
+                </div>
+                </div> <div class="pagination">
+    <a href="notice.html" class="prev-page">« 前へ</a>
+    <a href="#" class="current-page">2</a>
+</div>
+        </section>
     </div>
 
 </body>
