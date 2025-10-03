@@ -357,3 +357,12 @@ hr {
     color: #007bff;
     text-decoration: underline;
 }
+
+/* フッターのスタイル */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
