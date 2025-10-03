@@ -35,7 +35,6 @@ header h1 {
     text-align: center;
 }
 
-/* メンバー紹介ページにアー写を大きく配置するスタイル */
 .main-visual {
     width: 100%;
     max-height: 80vh;
@@ -49,26 +48,24 @@ header h1 {
     object-fit: cover;
 }
 
-/* style.css ファイル内 */
 .member-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    width: 650px; /* この行を追加または変更 */
-    margin: 0 auto; /* この行を追加 */
+    /* この行を削除: width: 650px; */
+    /* この行を削除: margin: 0 auto; */
 }
 
 .member {
     background: #fff;
     padding: 1.5rem;
     margin: 1rem;
-    flex: 0 0 280px; /* この行を変更 */
+    flex: 0 0 calc(50% - 2rem); /* この行を修正 */
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-/* 個々のメンバー写真のスタイルは削除しました */
 
 .button {
     display: inline-block;
@@ -84,21 +81,18 @@ header h1 {
 .button:hover {
     background-color: #555;
 }
-/* style.css の一番下に追加 */
 
-/* スマホ用デザイン */
+/* ---ここからがスマホ用の修正--- */
 @media (max-width: 768px) {
-
     .container {
         width: 90%;
     }
 
     .main-visual {
-        max-height: 50vh;
+        max-height: 40vh; /* スマホで画像が大きくなりすぎないように調整 */
     }
 
     .member-list {
-        width: 100%;
         flex-direction: column; /* 縦に並べる */
         gap: 10px;
     }
