@@ -66,13 +66,7 @@ header h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.member img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1.5rem;
-}
+/* 個々のメンバー写真のスタイルは削除しました */
 
 .button {
     display: inline-block;
