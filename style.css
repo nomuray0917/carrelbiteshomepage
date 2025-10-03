@@ -11,16 +11,44 @@ body {
 header {
     background: #333;
     color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    padding: 1rem 2rem;
     position: relative;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.header-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.header-nav a:hover {
+    color: #ddd;
+}
 .container {
     width: 80%;
     margin: auto;
@@ -70,14 +98,24 @@ header h1 {
 }
 
 /* スマホ用（500px以下）にスタイルを上書き */
-@media (max-width: 500px) {
-    .member-list {
-        flex-direction: column;
-        gap: 10px;
+/* style.css ファイル内 */
+/* ---ここからスマホ・タブレット用の設定--- */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
     }
     
+    .main-visual {
+        max-height: 40vh;
+    }
+
+    .member-list {
+        flex-direction: column; /* 縦に並べる */
+        gap: 10px;
+    }
+
     .member {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* 横幅いっぱいに広げる */
         margin: 0.5rem 0;
     }
 }
