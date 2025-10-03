@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    max-width: 1200px;
     margin: auto;
     overflow: hidden;
     padding: 2rem 0;
@@ -54,7 +54,7 @@ a {
     background: #fff;
     padding: 1.5rem;
     margin: 1rem;
-    flex: 0 0 280px; 
+    flex: 0 0 calc(50% - 2rem);
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -113,15 +113,19 @@ header h1 a {
         width: 90%;
     }
 
+    .main-visual {
+        max-height: 40vh;
+    }
+
     /* メンバーリストを縦並びにする */
     .member-list {
-        flex-direction: column; 
+        flex-direction: column;
         gap: 10px;
     }
 
     /* メンバーの幅を画面いっぱいに広げる */
     .member {
-        flex: 1 1 100%; 
+        flex: 1 1 100%;
         margin: 0.5rem 0;
     }
 
@@ -132,14 +136,13 @@ header h1 a {
         padding: 1rem;
     }
 
-    /* スマホでメニューを非表示 */
     .header-nav {
         display: none;
         width: 100%;
         text-align: center;
         margin-top: 1rem;
     }
-    
+
     .header-nav.active {
         display: block;
     }
