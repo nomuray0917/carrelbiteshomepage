@@ -56,11 +56,12 @@ header h1 {
     gap: 20px;
 }
 
+/* style.css ファイル内 */
 .member {
     background: #fff;
     padding: 1.5rem;
     margin: 1rem;
-    flex: 1 1 300px;
+    flex: 1 1 45%; /* この行を変更 */
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
