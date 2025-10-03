@@ -32,28 +32,59 @@ header h1 {
     margin-bottom: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* メンバー紹介ページにアー写を大きく配置するスタイル */
+.main-visual {
+    width: 100%;
+    max-height: 80vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.band-photo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .member-list {
     display: flex;
-    justify-content: center; /* これを追加 */
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px; /* これも追加 */
+    gap: 20px;
 }
 
 .member {
-    background: #f9f9f9;
-    padding: 1rem;
+    background: #fff;
+    padding: 1.5rem;
     margin: 1rem;
     flex: 1 1 300px;
     text-align: center;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .member img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #555;
 }
