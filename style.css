@@ -1,3 +1,4 @@
+/* style.css ファイル内 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,6 +13,7 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    position: relative;
 }
 
 header h1 {
@@ -48,20 +50,21 @@ header h1 {
     object-fit: cover;
 }
 
+/* PCとスマホ共通のメンバーリスト設定 */
 .member-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    /* この行を削除: width: 650px; */
-    /* この行を削除: margin: 0 auto; */
 }
 
+/* PC用のメンバープロフィール設定（デフォルト） */
 .member {
     background: #fff;
     padding: 1.5rem;
     margin: 1rem;
-    flex: 0 0 calc(50% - 2rem); /* この行を修正 */
+    /* ここで幅をcalc()で設定し、2列に強制 */
+    flex: 0 0 calc(50% - 2rem); 
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -82,14 +85,33 @@ header h1 {
     background-color: #555;
 }
 
-/* ---ここからがスマホ用の修正--- */
+.back-to-top {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: #555;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #777;
+}
+
+/* ---ここからスマホ用の設定--- */
 @media (max-width: 768px) {
     .container {
         width: 90%;
     }
 
     .main-visual {
-        max-height: 40vh; /* スマホで画像が大きくなりすぎないように調整 */
+        max-height: 40vh;
     }
 
     .member-list {
