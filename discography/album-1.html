@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const headerNav = document.querySelector('.header-nav');
+        
+        if(menuToggle && headerNav) {
+            menuToggle.addEventListener('click', function() {
+                headerNav.classList.toggle('active');
+            });
+        }
+    });
+</script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
