@@ -49,24 +49,25 @@ header h1 {
     object-fit: cover;
 }
 
+/* style.css ファイル内 */
 .member-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    width: 650px; /* この行を追加または変更 */
+    margin: 0 auto; /* この行を追加 */
 }
 
-/* style.css ファイル内 */
 .member {
     background: #fff;
     padding: 1.5rem;
     margin: 1rem;
-    flex: 1 1 45%; /* この行を変更 */
+    flex: 0 0 280px; /* この行を変更 */
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 /* 個々のメンバー写真のスタイルは削除しました */
 
 .button {
