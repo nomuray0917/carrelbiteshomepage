@@ -1,4 +1,4 @@
-/* style.css ファイル内 */
+/* ベースとなる共通スタイル */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,52 +8,16 @@ body {
     line-height: 1.6;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 2rem;
-    position: relative;
-}
-
-.header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2rem;
-}
-
-header h1 a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.header-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-.header-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
-
-.header-nav a:hover {
-    color: #ddd;
-}
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
     padding: 2rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .section {
@@ -78,7 +42,7 @@ header h1 a {
     object-fit: cover;
 }
 
-/* style.css ファイル内 */
+/* メンバーリストのレイアウト */
 .member-list {
     display: flex;
     justify-content: center;
@@ -90,76 +54,112 @@ header h1 a {
     background: #fff;
     padding: 1.5rem;
     margin: 1rem;
-    /* 500px以上の画面で、各メンバーを約280pxの幅で横に並べる */
     flex: 0 0 280px; 
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* スマホ用（500px以下）にスタイルを上書き */
-/* style.css ファイル内 */
-/* ---ここからスマホ・タブレット用の設定--- */
+/* ヘッダー・ナビゲーション（PC版） */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header h1 a {
+    color: #fff;
+}
+
+.header-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.header-nav a {
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.header-nav a:hover {
+    color: #ddd;
+}
+
+/* スマホ用メニューのトグルボタンは、最初は非表示 */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+/* ---ここからスマホ・タブレット用 (レスポンシブデザイン) --- */
 @media (max-width: 768px) {
     .container {
         width: 90%;
     }
-    
-    .main-visual {
-        max-height: 40vh;
-    }
 
+    /* メンバーリストを縦並びにする */
     .member-list {
-        flex-direction: column; /* 縦に並べる */
+        flex-direction: column; 
         gap: 10px;
     }
 
+    /* メンバーの幅を画面いっぱいに広げる */
     .member {
-        flex: 1 1 100%; /* 横幅いっぱいに広げる */
+        flex: 1 1 100%; 
         margin: 0.5rem 0;
     }
+
+    /* スマホ・タブレット用ヘッダー */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    /* スマホでメニューを非表示 */
+    .header-nav {
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+    .header-nav.active {
+        display: block;
+    }
+
+    .header-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .header-nav a {
+        display: block;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid #555;
+    }
+
+    /* スマホ用トグルボタンを表示 */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
 }
-
-.button {
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #555;
-}
-
-/* style.css ファイル内 */
-
-.back-to-top {
-    position: fixed; /* ここをfixedに変更 */
-    top: 20px; /* 上から20pxの位置に固定 */
-    right: 20px; /* 右から20pxの位置に固定 */
-    background-color: #555;
-    color: #fff;
-    padding: 0.8rem 1.5rem; /* パディングを調整して少し大きく */
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-    z-index: 1000; /* 他の要素より手前に表示 */
-}
-
-.back-to-top:hover {
-    background-color: #777;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-    /* position: relative; は不要になるため削除 */
-}
-

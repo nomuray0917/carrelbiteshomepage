@@ -6,20 +6,31 @@
     <title>carrel bites Official Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const headerNav = document.querySelector('.header-nav');
+    
+    menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        headerNav.classList.toggle('active');
+    });
+</script>
 <body>
 
     <header>
-    <div class="header-inner">
-        <h1><a href="index.html">【バンド名】</a></h1>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="members.html">ABOUT</a></li>
-                <li><a href="#">DISCOGRAPHY</a></li>
-                <li><a href="#">LIVE</a></li>
-            </ul>
-        </nav>
-    </div>
+    <h1><a href="index.html">【バンド名】</a></h1>
+    <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
+        <span class="icon">&#9776;</span>
+    </button>
+    <nav class="header-nav" id="main-nav">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="members.html">ABOUT</a></li>
+            <li><a href="#">DISCOGRAPHY</a></li>
+            <li><a href="#">LIVE</a></li>
+        </ul>
+    </nav>
 </header>
 
     <div class="container">
