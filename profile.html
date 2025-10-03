@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const headerNav = document.querySelector('.header-nav');
-    
-    menuToggle.addEventListener('click', () => {
-        const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-        menuToggle.setAttribute('aria-expanded', !expanded);
-        headerNav.classList.toggle('active');
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const headerNav = document.querySelector('.header-nav');
+
+        if(menuToggle && headerNav) {
+            menuToggle.addEventListener('click', function() {
+                headerNav.classList.toggle('active');
+            });
+        }
     });
 </script>
 <body>
