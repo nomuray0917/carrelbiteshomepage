@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お知らせ | carrel bites</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-
-    <header>
+<header>
     <h1><a href="../index.html">carrel bites</a></h1>
     <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
         <span class="icon">&#9776;</span>
@@ -39,30 +29,3 @@
         </a>
     </div>
 </header>
-
-    <div class="container">
-        <section class="section">
-            <h2>お知らせ</h2>
-
-            <div class="notice-list">
-                <article class="notice-item">
-                    <h3>【お知らせのタイトル1】</h3>
-                    <p class="notice-date">【日付1】</p>
-                    <p>【お知らせの内容1】</p>
-                </article>
-
-                <article class="notice-item">
-                    <h3>【お知らせのタイトル2】</h3>
-                    <p class="notice-date">【日付2】</p>
-                    <p>【お知らせの内容2】</p>
-                </article>
-
-                </div>
-                </div> <div class="pagination">
-    <!--　<a href="notice2.html" class="next-page">次へ »</a>-->
-</div>
-        </section>
-    </div>
-
-</body>
-</html>

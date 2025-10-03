@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>carrel bites Official Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const headerNav = document.querySelector('.header-nav');
-
-        if(menuToggle && headerNav) {
-            menuToggle.addEventListener('click', function() {
-                headerNav.classList.toggle('active');
-            });
-        }
-    });
-</script>
-<body>
-
-    <header>
+<header>
         <h1><a href="index.html">carrel bites</a></h1>
         <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
             <span class="icon">&#9776;</span>
@@ -49,13 +27,3 @@
                 <img src="images/tt_icon.png" alt="TikTok">
             </a>
         </div>
-
-    <div class="container">
-        <section class="section">
-            <h2>About Us</h2>
-            <p>2025年結成。大阪のロックバンド。</p>
-        </section>
-    </div>
-
-</body>
-</html>
