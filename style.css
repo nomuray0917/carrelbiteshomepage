@@ -1,48 +1,4 @@
-/* ベースとなる共通スタイル */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-    padding: 2rem 0;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.section {
-    background: #fff;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.main-visual {
-    width: 100%;
-    max-height: 80vh;
-    overflow: hidden;
-    text-align: center;
-}
-
-.band-photo {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* メンバーリストのレイアウト */
+/* PCとスマホ共通のメンバーリスト設定 */
 .member-list {
     display: flex;
     justify-content: center;
@@ -50,119 +6,40 @@ a {
     gap: 20px;
 }
 
+/* メンバーの基本設定（3人まで横並び） */
 .member {
     background: #fff;
     padding: 1.5rem;
     margin: 1rem;
-    flex: 0 0 calc(50% - 2rem);
+    /* 3つ横に並ぶように幅を調整 */
+    flex: 0 0 300px; 
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* ヘッダー・ナビゲーション（PC版） */
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* デスクトップ用（1024px以上）に2列表示を強制 */
+@media (min-width: 1024px) {
+    .member {
+        flex: 0 0 450px; /* 2つ並ぶように幅を調整 */
+    }
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2rem;
+/* タブレット・小型PC用 (769px 〜 1023px) */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .member {
+        flex: 0 0 calc(50% - 2rem);
+    }
 }
 
-header h1 a {
-    color: #fff;
-}
-
-.header-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-.header-nav a {
-    color: #fff;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
-
-.header-nav a:hover {
-    color: #ddd;
-}
-
-/* スマホ用メニューのトグルボタンは、最初は非表示 */
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: #fff;
-}
-
-/* ---ここからスマホ・タブレット用 (レスポンシブデザイン) --- */
+/* スマホ用 (〜768px) に1列表示を強制 */
 @media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    .main-visual {
-        max-height: 40vh;
-    }
-
-    /* メンバーリストを縦並びにする */
     .member-list {
         flex-direction: column;
         gap: 10px;
     }
-
-    /* メンバーの幅を画面いっぱいに広げる */
     .member {
         flex: 1 1 100%;
         margin: 0.5rem 0;
-    }
-
-    /* スマホ・タブレット用ヘッダー */
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
-    }
-
-    .header-nav {
-        display: none;
-        width: 100%;
-        text-align: center;
-        margin-top: 1rem;
-    }
-
-    .header-nav.active {
-        display: block;
-    }
-
-    .header-nav ul {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .header-nav a {
-        display: block;
-        padding: 0.8rem 0;
-        border-bottom: 1px solid #555;
-    }
-
-    /* スマホ用トグルボタンを表示 */
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
     }
 }
