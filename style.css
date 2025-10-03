@@ -67,8 +67,9 @@ header {
     color: #fff;
     padding: 1rem 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* これに変更 */
     align-items: center;
+    gap: 30px; /* 要素間の隙間を設定 */
 }
 
 .header-nav {
