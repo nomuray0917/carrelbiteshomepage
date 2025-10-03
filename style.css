@@ -61,7 +61,7 @@ a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* ヘッダー・ナビゲーション（PC向け） */
+/* PC向けヘッダー・ナビゲーションのスタイル */
 header {
     background: #333;
     color: #fff;
@@ -71,13 +71,9 @@ header {
     align-items: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2rem;
-}
-
-header h1 a {
-    color: #fff;
+.header-nav {
+    display: flex;
+    align-items: center;
 }
 
 .header-nav ul {
@@ -87,17 +83,6 @@ header h1 a {
     display: flex;
     gap: 20px;
 }
-
-.header-nav a {
-    color: #fff;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
-
-.header-nav a:hover {
-    color: #ddd;
-}
-
 /* ハンバーガーメニューはPCでは非表示 */
 .menu-toggle {
     display: none;
@@ -166,4 +151,21 @@ header h1 a {
         top: 1rem;
         right: 1rem;
     }
+}
+
+/* ソーシャルリンクのスタイル */
+.social-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-links img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2);
 }
