@@ -50,37 +50,34 @@ header h1 {
     object-fit: cover;
 }
 
-/* PCとスマホ共通のメンバーリスト設定 */
+/* style.css ファイル内 */
 .member-list {
     display: flex;
-    justify-content: center; /* 中央寄せ */
-    flex-wrap: wrap; /* 折り返しを許可 */
-    gap: 20px; /* 要素間の隙間 */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-/* デフォルト（PC用）のメンバープロフィール設定 */
 .member {
     background: #fff;
     padding: 1.5rem;
     margin: 1rem;
-    /* 50%を基準に幅を計算し、横に2つ並ぶようにする */
-    flex: 0 0 calc(50% - 2rem); 
+    /* 500px以上の画面で、各メンバーを約280pxの幅で横に並べる */
+    flex: 0 0 280px; 
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* ---ここからスマホ用の設定--- */
-@media (max-width: 768px) {
-    /* メンバーリストを縦並びにする */
+/* スマホ用（500px以下）にスタイルを上書き */
+@media (max-width: 500px) {
     .member-list {
-        flex-direction: column; 
+        flex-direction: column;
         gap: 10px;
     }
-
-    /* メンバーの幅を画面いっぱいに広げる */
+    
     .member {
-        flex: 1 1 100%; 
+        flex: 1 1 100%;
         margin: 0.5rem 0;
     }
 }
