@@ -418,3 +418,11 @@ header h1 {
 a {
     font-weight: bold;
 }
+/* ショップページのボタン配置 */
+.button-container-shop {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}

@@ -3,26 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ページが見つかりません | carrel bites</title>
+    <title>ショップ | carrel bites</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const headerNav = document.querySelector('.header-nav');
-        
-        if(menuToggle && headerNav) {
-            menuToggle.addEventListener('click', function() {
-                headerNav.classList.toggle('active');
-            });
-        }
-    });
-</script>
 <body>
 
     <header>
-        <h1><a href="index.html"><img src="images/logo.png" alt="carrel bites" class="header-logo"></a>
-        </h1>
+        <h1><a href="index.html">carrel bites</a></h1>
         <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
             <span class="icon">&#9776;</span>
         </button>
@@ -30,7 +17,7 @@
             <ul>
                 <li><a href="index.html">ホーム</a></li>
                 <li><a href="profile.html">プロフィール</a></li>
-                <li><a href="notice/notice.html">お知らせ</a></li>
+                <li><a href="notice/index.html">お知らせ</a></li>
                 <li><a href="discography.html">ディスコグラフィ</a></li>
                 <li><a href="live.html">ライブ</a></li>
                 <li><a href="video.html">ビデオ</a></li>
@@ -40,33 +27,32 @@
         </nav>
         <div class="social-links">
             <a href="https://x.com/carrelbites" target="_blank">
-                <img src="images/x_icon_w.png" alt="X">
+                <img src="images/x_icon.png" alt="X">
             </a>
             <a href="https://www.instagram.com/carrelbites" target="_blank">
-                <img src="images/ig_icon_w.png" alt="Instagram">
+                <img src="images/ig_icon.png" alt="Instagram">
             </a>
             <a href="https://www.youtube.com/@carrelbites" target="_blank">
-                <img src="images/yt_icon_w.png" alt="YouTube">
+                <img src="images/yt_icon.png" alt="YouTube">
             </a>
             <a href="https://www.tiktok.com/@carrel.bites" target="_blank">
-                <img src="images/tt_icon_w.png" alt="TikTok">
+                <img src="images/tt_icon.png" alt="TikTok">
             </a>
         </div>
     </header>
-
+    
     <div class="container">
-        <section class="section" style="text-align: center;">
-            <h2>ページが見つかりません</h2>
-            <p>お探しのページは、移動または削除された可能性があります。</p>
-            <div style="margin-top: 30px;">
-                <a href="index.html" class="button">トップページに戻る</a>
-            </div>
+        <section class="section">
+            <h2>ショップ</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">ご希望の商品カテゴリをお選びください。</p>
+            
+            <div class="button-container-shop">
+    <a href="https://suzuri.jp/carrelbites" class="button" target="_blank">グッズ</a>
+    <a href="https://forms.cloud.microsoft/r/Vk2m5wPXcp" class="button" target="_blank">CD</a>
+</div>
+            
         </section>
     </div>
-<footer>
-    <div class="container">
-        <p>&copy; carrel bites All rights reserved.</p>
-    </div>
-</footer>
+
 </body>
 </html>
