@@ -8,16 +8,17 @@ body {
     line-height: 1.6;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
 .container {
     max-width: 1200px;
     margin: auto;
     overflow: hidden;
     padding: 2rem 0;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
 }
 
 .section {
@@ -31,45 +32,41 @@ a {
 
 .main-visual {
     width: 100%;
-    max-height: 80vh;
-    overflow: hidden;
     text-align: center;
 }
 
 .band-photo {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-/* メンバーリストのレイアウト（PCとタブレット向け） */
-.member-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+.main-logo {
+    max-width: 80%;
+    height: auto;
 }
 
-.member {
-    background: #fff;
-    padding: 1.5rem;
-    margin: 1rem;
-    /* 2列表示を確実に適用 */
-    flex: 0 0 450px; 
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* PC向けヘッダー・ナビゲーションのスタイル */
+/* ヘッダー・ナビゲーション */
 header {
     background: #333;
     color: #fff;
     padding: 1rem 2rem;
     display: flex;
-    justify-content: flex-start; /* これに変更 */
+    justify-content: flex-start;
     align-items: center;
-    gap: 30px; /* 要素間の隙間を設定 */
+    gap: 30px;
+    position: relative;
+}
+
+.header-logo {
+    height: 50px;
+    width: auto;
+    vertical-align: middle;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
 }
 
 .header-nav {
@@ -84,91 +81,17 @@ header {
     display: flex;
     gap: 20px;
 }
-/* ハンバーガーメニューはPCでは非表示 */
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    background: none;
-    border: none;
+
+.header-nav a {
     color: #fff;
-}
-
-/* ---ここからスマホ・タブレット用 (レスポンシブデザイン) --- */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    .main-visual {
-        max-height: 40vh;
-    }
-/* PCとスマホ共通のメンバーリスト設定 */
-.member-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* メンバーの基本設定（PC用） */
-.member {
-    background: #fff;
-    padding: 1.5rem;
-    margin: 1rem;
-    flex: 0 0 450px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* 追加するテキストのスタイルを修正 */
-.member-order {
-    text-align: center;
     font-size: 1.1rem;
-    margin: 20px 0;
-    color: #333; /* PCで確実に見える色に */
+    transition: color 0.3s;
 }
 
-    /* ヘッダー・メニューの縦並びと開閉 */
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
-    }
-
-    .header-nav {
-        display: none;
-        width: 100%;
-        text-align: center;
-        margin-top: 1rem;
-    }
-    
-    .header-nav.active {
-        display: block;
-    }
-
-    .header-nav ul {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .header-nav a {
-        display: block;
-        padding: 0.8rem 0;
-        border-bottom: 1px solid #555;
-    }
-
-    /* ハンバーガーメニューを表示 */
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-    }
+.header-nav a:hover {
+    color: #ddd;
 }
 
-/* ソーシャルリンクのスタイル */
 .social-links {
     display: flex;
     gap: 10px;
@@ -184,98 +107,24 @@ header {
 .social-links a:hover img {
     transform: scale(1.2);
 }
-/* ページネーションのスタイル */
-.pagination {
-    text-align: center;
-    margin-top: 2rem;
-}
 
-.pagination a {
-    display: inline-block;
-    padding: 10px 15px;
-    margin: 0 5px;
-    background-color: #333;
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
     color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
 }
 
-.pagination a:hover {
-    background-color: #555;
-}
-
-.pagination .current-page {
-    background-color: #555;
-    cursor: default;
-}
-
-/* ディスコグラフィー一覧ページのグリッド表示 */
-.discography-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    text-align: center;
-}
-
-.discography-link {
-    width: 250px; /* 一覧のジャケットサイズ */
-    transition: transform 0.3s;
-}
-
-.discography-link:hover {
-    transform: translateY(-5px); /* ホバー時のアニメーション */
-}
-
-.discography-link img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.discography-link h3 {
-    margin-top: 10px;
-    font-size: 1.2rem;
-}
-
-/* 個別ページのスタイル */
-.album-details {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.album-art-large {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) {
-    .discography-link {
-        width: 150px;
-    }
-    .album-details {
-        flex-direction: column;
-    }
-    .member-order {
-        display: block;
-    }
-}
-/* ライブページのスタイル */
-.live-item-list {
+/* ライブ・お知らせリスト */
+.notice-list, .live-item-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.live-item {
+.notice-item, .live-item {
     background: #fff;
     padding: 1.5rem 2rem;
     border-radius: 8px;
@@ -283,17 +132,56 @@ header {
     text-align: left;
 }
 
-.live-item h3 {
+.notice-date, .live-date {
+    font-size: 0.9rem;
+    color: #888;
     margin-top: 0;
 }
 
-.live-date {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #555;
+.notice-item h3, .live-item h3 {
+    margin-top: 0;
     margin-bottom: 0.5rem;
 }
 
+.album-release {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.album-art {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+/* メンバーページレイアウト */
+.member-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.member {
+    background: #fff;
+    padding: 1.5rem;
+    margin: 1rem;
+    flex: 0 0 450px; 
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.member-order {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 20px 0;
+    color: #333;
+}
+
+/* ライブページ専用スタイル */
 .live-title {
     font-size: 1.5rem;
     font-weight: bold;
@@ -331,83 +219,8 @@ hr {
     border-top: 1px solid #ddd;
     margin: 3rem 0;
 }
-/* アーカイブリンクのスタイル */
-.archive-link {
-    text-align: center;
-    margin-top: 2rem;
-}
 
-.archive-link a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #555;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.archive-link a:hover {
-    background-color: #777;
-}
-
-/* お問い合わせページのスタイル */
-.forms-container {
-    width: 100%;
-    max-width: 640px;
-    margin: 2rem auto;
-}
-
-.forms-container iframe {
-    width: 100%;
-    min-height: 500px; /* ここを変更 */
-}
-
-.contact-email {
-    text-align: center;
-    font-size: 1.1rem;
-    margin-top: 3rem;
-    line-height: 1.8;
-}
-
-.contact-email a {
-    color: #007bff;
-    text-decoration: underline;
-}
-
-/* フッターのスタイル */
-footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 1.5rem 0;
-    margin-top: 3rem;
-}
-/* ヘッダーのロゴ画像スタイル */
-.header-logo {
-    height: 50px; /* ロゴ画像の高さを調整（必要に応じて） */
-    width: auto; /* 幅は自動調整 */
-    vertical-align: middle; /* 上下中央揃え */
-}
-
-/* 既存のh1のスタイルが影響しないように調整 */
-header h1 {
-    margin: 0; /* h1の余白をなくす */
-    padding: 0;
-}
-
-/* メインロゴのスタイル */
-.main-visual {
-    text-align: center;
-    margin: 3rem 0; /* 上下の余白 */
-}
-
-.main-logo {
-    max-width: 80%; /* 画面幅に合わせてサイズを調整 */
-    height: auto;
-}
-
-/* ページネーションのスタイル */
+/* ページネーション */
 .pagination {
     text-align: center;
     margin-top: 2rem;
@@ -432,10 +245,41 @@ header h1 {
     background-color: #555;
     cursor: default;
 }
-a {
-    font-weight: bold;
+
+/* フッター */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
 }
-/* ショップページのボタン配置 */
+
+/* お問い合わせページ */
+.forms-container {
+    width: 100%;
+    max-width: 640px;
+    margin: 2rem auto;
+}
+
+.forms-container iframe {
+    width: 100%;
+    min-height: 500px;
+}
+
+.contact-email {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 3rem;
+    line-height: 1.8;
+}
+
+.contact-email a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* ショップページ */
 .button-container-shop {
     display: flex;
     justify-content: center;
@@ -443,16 +287,159 @@ a {
     flex-wrap: wrap;
     margin-top: 3rem;
 }
-/* プロフィールページのメンバーの並び順テキスト */
-p.member-order {
+
+/* ディスコグラフィーページ */
+.discography-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
     text-align: center;
-    font-size: 1.1rem;
-    margin: 20px 0;
-    color: #333; /* あるいは、color: black; */
 }
-.member-order {
+
+.discography-link {
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.discography-link:hover {
+    transform: translateY(-5px);
+}
+
+.discography-link img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.discography-link h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.album-details {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.album-art-large {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ビデオページ */
+.video-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.video-item {
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(50% - 1.5rem);
+    max-width: 500px;
     text-align: center;
-    font-size: 1.1rem;
-    margin: 20px 0;
-    color: #555;
+}
+
+.video-item h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-top: 1.5rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* スマホ・タブレット用 (レスポンシブデザイン) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .member-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .member {
+        flex: 1 1 100%;
+        margin: 0.5rem 0;
+    }
+
+    .member .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        position: relative;
+    }
+
+    .header-nav {
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .header-nav.active {
+        display: block;
+    }
+
+    .header-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .header-nav a {
+        display: block;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid #555;
+    }
+
+    .social-links {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .album-details {
+        flex-direction: column;
+    }
+
+    .discography-link {
+        width: 150px;
+    }
 }
