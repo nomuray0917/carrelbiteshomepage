@@ -160,7 +160,221 @@ header {
 
     /* ハンバーガーメニューを表示 */
     .menu-toggle {
+        display: block/* ベースとなる共通スタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section {
+    background: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.main-visual {
+    width: 100%;
+    text-align: center;
+}
+
+.band-photo {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.main-logo {
+    max-width: 80%;
+    height: auto;
+}
+
+.notice-list, .live-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.notice-item, .live-item {
+    background: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.notice-item h3, .live-item h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.notice-date, .live-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 0;
+}
+
+/* メンバーリストのレイアウト */
+.member-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.member {
+    background: #fff;
+    padding: 1.5rem;
+    margin: 1rem;
+    flex: 0 0 450px; 
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.member-order {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 20px 0;
+    color: #333;
+}
+
+/* ヘッダー・ナビゲーション */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* バンドSNSの位置決めに必要 */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header h1 a {
+    color: #fff;
+}
+
+.header-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.header-nav a {
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.header-nav a:hover {
+    color: #ddd;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-links img {
+    width: 20px;
+    height: 20px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+/* ---ここからスマホ・タブレット用 (レスポンシブデザイン) --- */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .member-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .member {
+        flex: 1 1 100%;
+        margin: 0.5rem 0;
+    }
+    
+    .member .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        position: relative;
+    }
+
+    .header-nav {
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+    .header-nav.active {
         display: block;
+    }
+
+    .header-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .header-nav a {
+        display: block;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid #555;
+    }
+
+    .social-links {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
         position: absolute;
         top: 1rem;
         right: 1rem;
