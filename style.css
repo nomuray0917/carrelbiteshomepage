@@ -433,3 +433,9 @@ p.member-order {
     margin: 20px 0;
     color: #333; /* あるいは、color: black; */
 }
+.member-order {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 20px 0;
+    color: #555;
+}
