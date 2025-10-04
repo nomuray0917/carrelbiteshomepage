@@ -3,21 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>過去のライブ | carrel bites</title>
+    <title>VIDEO | carrel bites</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const headerNav = document.querySelector('.header-nav');
-        
-        if(menuToggle && headerNav) {
-            menuToggle.addEventListener('click', function() {
-                headerNav.classList.toggle('active');
-            });
-        }
-    });
-</script>
 <body>
 
     <header>
@@ -50,30 +38,32 @@
                 <img src="images/tt_icon_w.png" alt="TikTok">
             </a>
         </div>
-    </header> 
+    </header>  
     
-        <div class="container">
-            <section class="section">
-            <h2>過去のライブ</h2>
-
-            <h3>Past Shows</h3>
-            <div class="live-item-list">
-                <article class="live-item">
-                    <p class="live-date">【開催日】</p>
-                    <p class="live-title">【ライブイベント名】</p>
-                    <p class="live-venue">【会場】</p>
-                </article>
-            </div>
+    <div class="container">
+        <section class="section">
+            <h2>VIDEO</h2>
             
-            <hr>
+            <div class="video-grid">
+                <div class="video-item">
+                    <h3>【動画タイトル1】</h3>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="【YouTube動画の埋め込みURL】" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <p>【動画の説明文1】</p>
+                </div>
 
+                <div class="video-item">
+                    <h3>【動画タイトル2】</h3>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="【YouTube動画の埋め込みURL】" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <p>【動画の説明文2】</p>
+                </div>
 
+                </div>
         </section>
     </div>
-<footer>
-    <div class="container">
-        <p>&copy; carrel bites All rights reserved.</p>
-    </div>
-</footer>
+
 </body>
 </html>
