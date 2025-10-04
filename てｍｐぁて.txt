@@ -29,3 +29,35 @@
         </a>
     </div>
 </header>
+
+<header>
+    <h1><a href="../index.html">carrel bites</a></h1>
+    <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
+        <span class="icon">&#9776;</span>
+    </button>
+    <nav class="header-nav" id="main-nav">
+        <ul>
+            <li><a href="../index.html">ホーム</a></li>
+            <li><a href="../profile.html">プロフィール</a></li>
+            <li><a href="notice/notice.html">お知らせ</a></li>
+            <li><a href="../discography.html">ディスコグラフィ</a></li>
+            <li><a href="../live.html">ライブ</a></li>
+            <li><a href="../contact.html">お問い合わせ</a></li>
+        </ul>
+    </nav>
+    <div class="social-links">
+        <div class="social-links">
+        <a href="https://x.com/carrelbites" target="_blank">
+            <img src="../images/x_icon_w.png" alt="X">
+        </a>
+        <a href="https://www.instagram.com/carrelbites" target="_blank">
+            <img src="../images/ig_icon_w.png" alt="Instagram">
+        </a>
+        <a href="https://www.youtube.com/@carrelbites" target="_blank">
+            <img src="../images/yt_icon_w.png" alt="YouTube">
+        </a>
+        <a href="https://www.tiktok.com/@carrel.bites" target="_blank">
+            <img src="../images/tt_icon_w.png" alt="TikTok">
+        </a>
+    </div>
+</header>
