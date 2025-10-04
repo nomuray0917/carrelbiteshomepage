@@ -389,3 +389,29 @@ header h1 {
     max-width: 80%; /* 画面幅に合わせてサイズを調整 */
     height: auto;
 }
+
+/* ページネーションのスタイル */
+.pagination {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #555;
+}
+
+.pagination .current-page {
+    background-color: #555;
+    cursor: default;
+}

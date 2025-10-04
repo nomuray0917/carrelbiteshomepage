@@ -1,0 +1,4 @@
+<article class="notice-item">
+                    <p class="notice-date">2025-10-04</p>
+                    <h3><a href="notices/2025-10-04.html">【お知らせのタイトル1】</a></h3>
+                </article>
