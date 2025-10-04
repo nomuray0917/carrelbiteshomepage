@@ -127,9 +127,8 @@ header {
     text-align: center;
     font-size: 1.1rem;
     margin: 20px 0;
-    color: #333; /* PCで確実に見える色に */
+    color: #333;
 }
-
     /* ヘッダー・メニューの縦並びと開閉 */
     header {
         flex-direction: column;
@@ -267,22 +266,11 @@ header {
     .member-order {
         display: block;
     }
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
-        position: relative; /* トグルボタンの位置決めに必要 */
-    }
-
-    .header-nav {
-        margin-top: 1rem;
+    .member .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
     }
     
-    .social-links {
-        position: absolute; /* 位置を固定 */
-        top: 1rem;
-        right: 1rem;
-    }
 }
 /* ライブページのスタイル */
 .live-item-list {
