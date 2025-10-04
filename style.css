@@ -415,3 +415,6 @@ header h1 {
     background-color: #555;
     cursor: default;
 }
+a {
+    font-weight: bold;
+}
