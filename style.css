@@ -103,18 +103,32 @@ header {
     .main-visual {
         max-height: 40vh;
     }
+/* PCとスマホ共通のメンバーリスト設定 */
+.member-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-    /* メンバーリストを縦並びに */
-    .member-list {
-        flex-direction: column;
-        gap: 10px;
-    }
+/* メンバーの基本設定（PC用） */
+.member {
+    background: #fff;
+    padding: 1.5rem;
+    margin: 1rem;
+    flex: 0 0 450px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-    /* メンバーの幅を画面いっぱいに */
-    .member {
-        flex: 1 1 100%;
-        margin: 0.5rem 0;
-    }
+/* 追加するテキストのスタイルを修正 */
+.member-order {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 20px 0;
+    color: #333; /* PCで確実に見える色に */
+}
 
     /* ヘッダー・メニューの縦並びと開閉 */
     header {
@@ -249,6 +263,9 @@ header {
     }
     .album-details {
         flex-direction: column;
+    }
+    .member-order {
+        display: block;
     }
 }
 /* ライブページのスタイル */
