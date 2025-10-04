@@ -267,6 +267,22 @@ header {
     .member-order {
         display: block;
     }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        position: relative; /* トグルボタンの位置決めに必要 */
+    }
+
+    .header-nav {
+        margin-top: 1rem;
+    }
+    
+    .social-links {
+        position: absolute; /* 位置を固定 */
+        top: 1rem;
+        right: 1rem;
+    }
 }
 /* ライブページのスタイル */
 .live-item-list {
