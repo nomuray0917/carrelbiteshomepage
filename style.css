@@ -378,3 +378,14 @@ header h1 {
     margin: 0; /* h1の余白をなくす */
     padding: 0;
 }
+
+/* メインロゴのスタイル */
+.main-visual {
+    text-align: center;
+    margin: 3rem 0; /* 上下の余白 */
+}
+
+.main-logo {
+    max-width: 80%; /* 画面幅に合わせてサイズを調整 */
+    height: auto;
+}
