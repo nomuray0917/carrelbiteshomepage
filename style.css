@@ -426,3 +426,9 @@ a {
     flex-wrap: wrap;
     margin-top: 3rem;
 }
+.member-order {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 20px 0;
+    color: #555; /* 文字色を少し薄くして見やすくする */
+}
