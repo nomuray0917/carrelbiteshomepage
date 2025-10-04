@@ -6,6 +6,18 @@
     <title>ショップ | carrel bites</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const headerNav = document.querySelector('.header-nav');
+        
+        if(menuToggle && headerNav) {
+            menuToggle.addEventListener('click', function() {
+                headerNav.classList.toggle('active');
+            });
+        }
+    });
+</script>
 <body>
 
     <header>
