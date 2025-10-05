@@ -52,9 +52,8 @@ header {
     color: #fff;
     padding: 1rem 2rem;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    gap: 30px;
     position: relative;
 }
 
@@ -67,11 +66,6 @@ header {
 header h1 {
     margin: 0;
     padding: 0;
-}
-
-.header-nav {
-    display: flex;
-    align-items: center;
 }
 
 .header-nav ul {
@@ -168,7 +162,7 @@ header h1 {
     background: #fff;
     padding: 1.5rem;
     margin: 1rem;
-    flex: 0 0 450px; 
+    flex: 0 0 450px;
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -376,7 +370,6 @@ footer {
 }
 
 /* スマホ・タブレット用 (レスポンシブデザイン) */
-/* スマホ・タブレット用 (レスポンシブデザイン) */
 @media (max-width: 768px) {
     .container {
         width: 90%;
@@ -404,6 +397,10 @@ footer {
         position: relative;
     }
 
+    .header-right-group {
+        display: none;
+    }
+
     .header-nav {
         display: none;
         width: 100%;
@@ -426,12 +423,10 @@ footer {
         border-bottom: 1px solid #555;
     }
 
-    .social-links {
-        /* スマホではデフォルトでヘッダー内に配置 */
-        position: static;
-        margin-top: 1rem;
+    .social-links-mobile {
+        display: none;
     }
-    
+
     .menu-toggle {
         display: block;
         position: absolute;
