@@ -376,8 +376,26 @@ footer {
 }
 
 /* スマホ・タブレット用 (レスポンシブデザイン) */
+/* スマホ・タブレット用 (レスポンシブデザイン) */
 @media (max-width: 768px) {
-    /* ...その他のスマホ用スタイル... */
+    .container {
+        width: 90%;
+    }
+
+    .member-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .member {
+        flex: 1 1 100%;
+        margin: 0.5rem 0;
+    }
+
+    .member .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
     header {
         flex-direction: column;
@@ -409,14 +427,15 @@ footer {
     }
 
     .social-links {
-        /* ここを修正 */
+        /* スマホではデフォルトでヘッダー内に配置 */
+        position: static;
+        margin-top: 1rem;
+    }
+    
+    .menu-toggle {
+        display: block;
         position: absolute;
         top: 1rem;
         right: 1rem;
-        /* スマホ用ヘッダー内でのみ機能するように */
-    }
-
-    .menu-toggle {
-        display: block;
     }
 }
