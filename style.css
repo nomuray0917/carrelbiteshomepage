@@ -369,7 +369,7 @@ footer {
     height: 100%;
 }
 
-/* スマホ・タブレット用 (レスポンシブデザイン) */
+/* ---ここからスマホ・タブレット用 (レスポンシブデザイン) --- */
 @media (max-width: 768px) {
     .container {
         width: 90%;
@@ -397,10 +397,6 @@ footer {
         position: relative;
     }
 
-    .header-right-group {
-        display: none;
-    }
-
     .header-nav {
         display: none;
         width: 100%;
@@ -423,8 +419,9 @@ footer {
         border-bottom: 1px solid #555;
     }
 
-    .social-links-mobile {
-        display: none;
+    .social-links {
+        position: static;
+        margin-top: 1rem;
     }
 
     .menu-toggle {
@@ -432,5 +429,17 @@ footer {
         position: absolute;
         top: 1rem;
         right: 1rem;
+    }
+
+    .album-details {
+        flex-direction: column;
+    }
+
+    .discography-link {
+        width: 150px;
+    }
+
+    .header-right-group {
+        display: none;
     }
 }
