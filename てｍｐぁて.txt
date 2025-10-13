@@ -1,6 +1,6 @@
 <header>
     <h1><a href="../index.html">
-        <img src="images/logo.png" alt="carrel bites" class="header-logo">
+        <img src="images/logo.png" onerror="this.onerror=null; this.src='images/No_Image.png';" alt="carrel bites" class="header-logo">
         </a>
     </h1>
     <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
@@ -21,16 +21,16 @@
     <div class="social-links">
         <div class="social-links">
         <a href="https://x.com/carrelbites" target="_blank">
-            <img src="../images/x_icon_w.png" alt="X">
+            <img src="../images/x_icon_w.png" onerror="this.onerror=null; this.src='images/No_Image.png';" alt="X">
         </a>
         <a href="https://www.instagram.com/carrelbites" target="_blank">
-            <img src="../images/ig_icon_w.png" alt="Instagram">
+            <img src="../images/ig_icon_w.png" onerror="this.onerror=null; this.src='images/No_Image.png';" alt="Instagram">
         </a>
         <a href="https://www.youtube.com/@carrelbites" target="_blank">
-            <img src="../images/yt_icon_w.png" alt="YouTube">
+            <img src="../images/yt_icon_w.png" onerror="this.onerror=null; this.src='images/No_Image.png';" alt="YouTube">
         </a>
         <a href="https://www.tiktok.com/@carrel.bites" target="_blank">
-            <img src="../images/tt_icon_w.png" alt="TikTok">
+            <img src="../images/tt_icon_w.png" onerror="this.onerror=null; this.src='images/No_Image.png';" alt="TikTok">
         </a>
     </div>
 </header>
