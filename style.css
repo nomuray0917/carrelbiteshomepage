@@ -493,3 +493,16 @@ footer .container {
     padding-left: 20px !important;
     padding-right: 20px !important;
 }
+
+/* 2. 画像のサイズを元に戻す */
+.band-photo {
+    /* アー写が親要素の幅を超えないようにする */
+    max-width: 100%; 
+    height: auto;
+}
+
+/* 3. プロフィールページのアー写を制限（特にデカくなった部分） */
+.profile-image-section img {
+    max-width: 80%;
+    height: auto;
+}
