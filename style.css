@@ -472,3 +472,24 @@ footer {
         display: none;
     }
 }
+
+/* FOOTER FIX: プロフィールページでフッターを強制的に画面幅いっぱいに広げる */
+footer {
+    /* ページのどこかの要素が 'overflow: hidden'などで幅を制限しているのを強制解除 */
+    width: 100% !important; 
+    max-width: none !important; 
+    margin: 0 !important;
+    padding: 1.5rem 0; /* padding はそのまま維持 */
+    background-color: #1b1b1b !important;
+    /* その他のスタイルも必要に応じて !important をつける */
+}
+
+/* フッター内のテキストコンテナも確実に中央寄せにする */
+footer .container {
+    /* 既存のmax-width: 1200px; はそのまま利用 */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    /* フッター内コンテナの左右paddingを調整して画面端からの距離を調整 */
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
