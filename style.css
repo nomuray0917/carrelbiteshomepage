@@ -1,3 +1,30 @@
+/* FOOTER FIX: コンテンツの量に関わらずフッターを最下部に固定する構造 */
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    /* ページのメインコンテンツ部分が残りのスペースを全て占有する */
+    flex: 1 0 auto;
+    /* 既存のmax-width, margin: auto はそのまま維持 */
+    max-width: 1200px; 
+    margin: auto;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+footer {
+    /* フッターが縮まないように固定し、背景を画面幅いっぱいに広げる */
+    flex-shrink: 0; 
+    width: 100%; /* これが端まで伸びることを保証する */
+    background-color: #1b1b1b; /* 背景色の再指定 */
+}
 /* ベースとなる共通スタイル */
 body {
     font-family: Arial, sans-serif;
@@ -238,6 +265,7 @@ hr {
 .pagination .current-page {
     background-color: #555;
     cursor: default;
+
 }
 
 /* フッター */
