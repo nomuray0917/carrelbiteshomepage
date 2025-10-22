@@ -55,6 +55,10 @@ a {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 90%; /* 親要素の90%の幅を占める */
+    max-width: 1000px; /* 最大幅を1000pxに設定 */
+    margin-left: auto; /* 中央寄せ */
+    margin-right: auto; /* 中央寄せ */
 }
 
 .main-visual {
