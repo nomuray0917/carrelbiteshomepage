@@ -518,5 +518,40 @@ footer .container {
 /* style.css 内にこの定義があることを確認 */
 .button-container {
     text-align: center;
-    margin-top: 2rem; /* ボタンの上に適切な余白を確保 */
+    margin-top: 1rem; /* ボタンの上に適切な余白を確保 */
+}
+
+/* ライブ一覧のレイアウト修正（縦長解消と横並び） */
+.live-item-content {
+    display: flex;
+    justify-content: space-between; /* 情報を左、ボタンを右に寄せる */
+    align-items: center; /* 要素を中央揃えにする */
+    gap: 20px;
+    width: 100%;
+}
+
+.live-info {
+    text-align: left;
+    /* 情報部分が広がるように設定 */
+    flex-grow: 1; 
+}
+
+.live-actions {
+    /* ボタン部分は幅を取らないように固定 */
+    flex-shrink: 0;
+}
+
+/* スマホ対応の調整 */
+@media (max-width: 768px) {
+    .live-item-content {
+        flex-direction: column; /* スマホでは縦並びに戻す */
+        align-items: flex-start;
+    }
+    .live-actions {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .live-actions .button {
+        width: 100%; /* スマホでボタンを横幅いっぱいに広げる */
+    }
 }
