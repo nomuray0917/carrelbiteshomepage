@@ -514,3 +514,9 @@ footer .container {
     max-width: 80%;
     height: auto;
 }
+
+/* style.css 内にこの定義があることを確認 */
+.button-container {
+    text-align: center;
+    margin-top: 2rem; /* ボタンの上に適切な余白を確保 */
+}
