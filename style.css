@@ -555,3 +555,19 @@ footer .container {
         width: 100%; /* スマホでボタンを横幅いっぱいに広げる */
     }
 }
+
+.band-photo {
+    /* PCでは幅の90%に制限 */
+    max-width: 90%; 
+    height: auto;
+    /* アー写が中央に表示されるように設定（すでにある場合は不要） */
+    margin-left: auto;
+    margin-right: auto;
+    display: block; 
+}
+
+/* 巨大になりすぎないよう、絶対的な最大サイズを設定 */
+.main-visual {
+    max-width: 1000px; /* 画像の最大幅を1000pxに制限 */
+    margin: 3rem auto; /* 中央寄せと上下の余白 */
+}
