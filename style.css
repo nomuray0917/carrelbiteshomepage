@@ -571,3 +571,20 @@ footer .container {
     max-width: 1000px; /* 画像の最大幅を1000pxに制限 */
     margin: 3rem auto; /* 中央寄せと上下の余白 */
 }
+
+/* トップページ - リリースリンクのスタイル */
+.release-link {
+    display: inline-block; /* リンクをブロック化して、画像全体をクリック可能にする */
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.release-link:hover {
+    transform: translateY(-5px); /* マウスオーバーで少し上に浮き上がる */
+}
+
+/* 既存の .album-release スタイルを調整 */
+.album-release {
+    text-align: center;
+    margin-bottom: 3rem;
+}
