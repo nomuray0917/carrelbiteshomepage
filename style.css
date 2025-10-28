@@ -7,6 +7,7 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    
 }
 
 .container {
@@ -90,6 +91,7 @@ header {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding: 1rem; /* 左右のpaddingを減らす */
 }
 
 .header-logo {
@@ -409,7 +411,11 @@ footer {
 /* ---ここからスマホ・タブレット用 (レスポンシブデザイン) --- */
 @media (max-width: 768px) {
     .container {
-        width: 90%;
+        /* 幅を95%にし、端の余白を確保 */
+        width: 95%; 
+        /* 左右のpaddingをなくすことで、はみ出しを防ぐ */
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .member-list {
