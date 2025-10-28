@@ -10,6 +10,18 @@
 </head>
 <body>
     
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const headerNav = document.querySelector('.header-nav');
+        
+        if(menuToggle && headerNav) {
+            menuToggle.addEventListener('click', function() {
+                headerNav.classList.toggle('active');
+            });
+        }
+    });
+</script>
 <header>
     <h1><a href="../../index.html">
         <img src="../../images/logo.png" onerror="this.onerror=null; this.src='../images/no_image.png';" alt="carrel bites" class="header-logo">
